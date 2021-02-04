@@ -1,0 +1,41 @@
+/*
+Lab1_Problem1_ITS340_RileySharyl
+Problem #1: Write a program in Java to ask a user for input of a number. 
+Check whether a number is even or odd and display a message to that effect. 
+Keep asking for input from the user until the user enters a code that 
+designates to QUIT.
+ */
+package lab1_problem1_its340_rileysharyl; //your file name
+
+/* console input/outsput*/
+import javax.swing.*; 
+
+public class Lab1_Problem1_ITS340_RileySharyl {
+
+  
+    public static void main(String[] args) {
+       final int QUIT = 999;
+       String message;
+       String entry = JOptionPane.showInputDialog(null, "Enter an interger number or " + QUIT + " to quit." );
+       int number = Integer.parseInt(entry);
+       
+       /*while loop = */
+       while(number != QUIT)
+       {
+           if (number % 2 == 0)
+           {
+               message = "Number is Even!";
+            }
+           else
+           {
+               message = "Number is Odd!";   
+             }
+            JOptionPane.showInputDialog(null, message);
+            entry = JOptionPane.showInputDialog(null, "Enter an interger number or " + QUIT + " to quit." );
+            number = Integer.parseInt(entry);
+               }
+           }
+       }
+    
+    
+
