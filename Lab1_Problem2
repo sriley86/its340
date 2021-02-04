@@ -1,0 +1,45 @@
+/*
+Write an application that prompts the user for a student’s numeric high school grade point
+average, the student’s number of extracurricular activities, and the student’s number of service
+activities. Display the message “Scholarship candidate” if the student has any of the following:
+ A grade point average of 3.8 or above and at least one extracurricular activity and one
+service activity
+ A grade point average below 3.8 but at least 3.4 and a total of at least three extracurricular
+and service activities
+ A grade point average below 3.4 but at least 3.0 and at least two extracurricular activities
+and three service activities
+If the student does not meet any of the qualification criteria, display “Not a candidate”. Save
+the file as Scholarhsip.java
+ */
+package lab1_scholarship_its340_rileysharyl;//your file name here
+import java.util.Scanner;
+
+public class Lab1_Scholarship_ITS340_RileySharyl {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float averageGrade = 0;
+        int extraActivities = 0;
+        int extraService = 0;
+        System.out.println("Enter High School Grade Point Average: ");
+        averageGrade=sc.nextFloat();
+        System.out.println("Enter Number of Extracurricular Activities: ");
+        extraActivities=sc.nextInt();
+        System.out.println("Enter Number of Service Activities: ");
+        extraService=sc.nextInt();
+      
+         if (averageGrade >= 3.8 && extraActivities >= 1 && extraService >= 1)
+             {
+            System.out.println("Scholarship Candidate");
+             }
+        else if (averageGrade >= 3.4 && extraActivities >= 3 && extraService >= 3)
+            {
+            System.out.println("Scholarship Candidate");
+            }
+           else
+            {
+               System.out.println("Not a Scholarship Candidate");
+            }
+         
+             }   
+    }   
